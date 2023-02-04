@@ -5,6 +5,7 @@ def home(request):
     """Home page view."""
     return render(request, "index.html")
 
+
 def article(request, slug):
     """Article page view."""
     print(f"slug: {slug}")

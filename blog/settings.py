@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 import os
 from pathlib import Path
+
 from decouple import config
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -45,12 +46,14 @@ LOGGING = {
 # Application definition
 
 INSTALLED_APPS = [
-    "django.contrib.admin", 
-    "django.contrib.auth", 
-    "django.contrib.contenttypes", 
-    "django.contrib.sessions", 
-    "django.contrib.messages", 
-    "django.contrib.staticfiles", "portability", ]
+    "django.contrib.admin",
+    "django.contrib.auth",
+    "django.contrib.contenttypes",
+    "django.contrib.sessions",
+    "django.contrib.messages",
+    "django.contrib.staticfiles",
+    "portability",
+]
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
