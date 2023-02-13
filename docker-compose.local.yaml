@@ -1,7 +1,7 @@
 services:
   blog:
     build: .
-    command: bash -c "python manage.py runserver 0.0.0.0:8000"
+    command: bash -c "python manage.py runserver 0.0.0.0:8002"
     depends_on:
       postgres:
         condition: service_healthy
