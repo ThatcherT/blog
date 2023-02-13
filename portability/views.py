@@ -1,12 +1,15 @@
 from django.shortcuts import render
 
+from portability.models import Post
+
 
 def home(request):
     """Home page view."""
-    return render(request, "index.html")
+    posts = Post.objects.all().order_by("-date")
+    context = {"posts": posts}
+    return render(request, "index.html", context)
 
 
 def article(request, slug):
     """Article page view."""
-    print(f"slug: {slug}")
-    return render(request, f"{slug}.html", {"slug": slug})
+    return render(request, f"posts/{slug}.html", {"slug": slug})

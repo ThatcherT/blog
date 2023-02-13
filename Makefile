@@ -8,3 +8,6 @@ venv:
 	python -m venv .venv
 	source .venv/bin/activate
 	pip install -r requirements.txt
+
+compile:
+	docker exec -it blog_blog_1 python manage.py compile_md
